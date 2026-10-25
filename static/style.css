@@ -1,0 +1,161 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #312e81);
+    color: #f8fafc;
+    padding: 40px 16px;
+}
+
+.container {
+    width: min(100%, 750px);
+    margin: 0 auto;
+    padding: 32px;
+    background: rgba(30, 41, 59, 0.95);
+    border: 1px solid #475569;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #c4b5fd;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+form {
+    display: grid;
+    gap: 16px;
+    margin: 28px 0;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px dashed #818cf8;
+    border-radius: 10px;
+    background: #0f172a;
+    color: white;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #7c3aed;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6d28d9;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+h2 {
+    margin: 28px 0 16px;
+    font-size: 22px;
+}
+
+#preview,
+#resultImage {
+    display: block;
+    max-width: 100%;
+    max-height: 450px;
+    margin: 18px auto;
+    border-radius: 12px;
+}
+
+#preview[hidden],
+#resultImage[hidden] {
+    display: none;
+}
+
+#objectList {
+    padding-left: 24px;
+    line-height: 2;
+}
+
+#status {
+    color: #c4b5fd;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
+
+
+#cameraSection {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid #475569;
+}
+
+.camera-box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #020617;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+#camera {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#cameraOverlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.camera-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.camera-buttons button {
+    flex: 1;
+    min-width: 130px;
+}
+
+#stopCamera {
+    background: #475569;
+}
+
+#cameraObjects {
+    padding-left: 24px;
+    line-height: 2;
+}
+

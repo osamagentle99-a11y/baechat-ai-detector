@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VisionX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Outfit', sans-serif; }
+        body { background:#0a0a0b; color:white; display:flex; justify-content:center; align-items:center; min-height:100vh; background: radial-gradient(circle at 50% 0%, #1a3a2a 0%, #0a0a0b 70%); }
+        .box { background:#141414; padding:40px 35px; border-radius:24px; border:1px solid #222; width:90%; max-width:400px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+        .logo { font-size:28px; font-weight:700; color:#00ff88; text-align:center; margin-bottom:8px; } .logo span { color:white; }
+        .subtitle { text-align:center; color:#666; font-size:14px; margin-bottom:30px; }
+        label { display:block; font-size:13px; color:#aaa; margin-bottom:6px; margin-top:14px; }
+        input { width:100%; padding:13px 14px; border-radius:12px; border:1px solid #333; background:#1f1f1f; color:white; font-size:14px; outline:none; }
+        input:focus { border-color:#00ff88; background:#222; }
+        button { width:100%; padding:14px; background:#00ff88; color:black; font-weight:700; border:none; border-radius:30px; cursor:pointer; font-size:15px; margin-top:24px; }
+        .error { background:#ff3b3b22; border:1px solid #ff3b3b44; color:#ff5a5a; padding:10px 14px; border-radius:10px; font-size:13px; margin-bottom:15px; }
+        .footer { text-align:center; margin-top:20px; font-size:14px; color:#666; } .footer a { color:#00ff88; text-decoration:none; font-weight:600; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="logo">Vision<span>X</span></div>
+        <p class="subtitle">Welcome back! Login to continue</p>
+        {% if error %}<div class="error">❌ {{ error }}</div>{% endif %}
+        <form method="POST">
+            <label>Email Address *</label>
+            <input name="email" type="email" placeholder="osama@example.com" required>
+            <label>Password *</label>
+            <input name="password" type="password" placeholder="Your password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="footer">No account? <a href="/register">Create Account</a></div>
+    </div>
+</body>
+</html>
